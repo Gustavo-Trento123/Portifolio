@@ -1,0 +1,125 @@
+body{
+    background-color: rgb(182, 182, 182);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#navbar{
+    width: 100%;
+    height: 7vh;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+
+}
+
+#menu{
+    width: 93vw;
+    height: 85vh;
+    
+    background-color: rgb(219, 219, 219);
+
+    display: flex;
+    align-items: center
+}
+
+#descricoes{
+    font-size: 14pt;
+    
+    width: 30vw;
+    height: 80%;
+
+    margin:20%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#opcoes{
+    width: 25vw;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.opcao-menu{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    margin-bottom:15px ;
+    font-size: 14pt;
+}
+
+.opcao-menu:hover{
+    animation-duration: 0.5s;
+    animation-name: selecionar;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.opcao-menu::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    transform-origin: center;
+    transform: scaleX(0.0);
+    transition: transform 0.3s ease-out;
+}
+
+.opcao-menu:hover::before {
+    transform: scaleX(1);
+}
+
+.nome{
+    margin: 0 auto;
+    font-size: 100%;
+}
+
+.icon{
+    margin: 0 5px 0 5px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 360px){
+    .nome{
+        font-size: 70%;
+    }
+}
+
+@media (max-width: 768px){
+    #opcoes{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+}
+
+/* ANIMAÇÕES */
+@keyframes selecionar {
+    0%{
+        font-size: 14pt;
+    }
+
+    100%{
+        font-size: 24pt;
+    }
+}
+
