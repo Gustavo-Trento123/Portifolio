@@ -99,11 +99,11 @@ body{
 }
 
 .entrar{
-    animation: entrar 2s;
+    animation: entrar 2s forwards;
 }
 
 .sair{
-    animation: sair 2s;
+    animation: sair 2s forwards;
 }
 
 
