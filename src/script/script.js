@@ -28,20 +28,24 @@ function alterarDescrição() {
             }else{
                 engine.view.descricaoPaginaInicial.classList.remove('entrar');
                 engine.view.descricaoPaginaInicial.classList.add('sair');
-            }}
-        ,500)
-        
-        engine.view.descricaoPaginaInicial.textContent = 'O meu conhecimento na área e habilidades profissionais!';
-    });/* Altera o cométencias */
+            }
 
-    engine.view.opcaoProjetos.addEventListener('mouseover', function () {
-        setTimeout(function() {
-            if(engine.view.descricaoPaginaInicial.classList.contains('sair')){
-                engine.view.descricaoPaginaInicial.classList.remove('sair');
-                engine.view.descricaoPaginaInicial.classList.add('entrar');
-            }else{
-                engine.view.descricaoPaginaInicial.classList.remove('entrar');
-                engine.view.descricaoPaginaInicial.classList.add('sair');
+            
+            },500)
+            
+            setTimeout(function(){
+                engine.view.descricaoPaginaInicial.textContent = 'O meu conhecimento na área e habilidades profissionais!';}
+            ,3000
+        )})/* Altera o competencias */
+        
+        engine.view.opcaoProjetos.addEventListener('mouseover', function () {
+            setTimeout(function() {
+                if(engine.view.descricaoPaginaInicial.classList.contains('sair')){
+                    engine.view.descricaoPaginaInicial.classList.remove('sair');
+                    engine.view.descricaoPaginaInicial.classList.add('entrar');
+                }else{
+                    engine.view.descricaoPaginaInicial.classList.remove('entrar');
+                    engine.view.descricaoPaginaInicial.classList.add('sair');
                 engine.view.descricaoPaginaInicial.classList.remove('sair');
                 engine.view.descricaoPaginaInicial.classList.add('entrar');
             }}
