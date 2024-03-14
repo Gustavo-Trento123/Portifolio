@@ -20,38 +20,36 @@ function alterarDescrição() {
         engine.view.descricaoPaginaInicial.textContent = 'Onde estudei, coisas que aprendi e mais!';
     });/* Altera o 'formações */
 
+
     engine.view.opcaoCompetencias.addEventListener('mouseover', function () {
-        setTimeout(function() {
-            if(engine.view.descricaoPaginaInicial.classList.contains('sair')){
-                engine.view.descricaoPaginaInicial.classList.remove('sair');
-                engine.view.descricaoPaginaInicial.classList.add('entrar');
-            }else{
-                engine.view.descricaoPaginaInicial.classList.remove('entrar');
-                engine.view.descricaoPaginaInicial.classList.add('sair');
+        for (let i = 0; i <= 2; i++) {
+            if (engine.view.descricaoPaginaInicial.classList.contains('entrar')) {
+                card.classList.remove('entrar');
+                card.classList.add('sair');
+            } else {
+                setTimeout(function () {
+                    engine.view.descricaoPaginaInicial.textContent = 'O meu conhecimento na área e habilidades profissionais!';
+                    card.classList.remove('sair');
+                    card.classList.add('entrar');
+                }, 2000);
             }
 
-            
-            },500)
-            
-            setTimeout(function(){
-                engine.view.descricaoPaginaInicial.textContent = 'O meu conhecimento na área e habilidades profissionais!';}
-            ,3000
-        )})/* Altera o competencias */
-        
-        engine.view.opcaoProjetos.addEventListener('mouseover', function () {
-            setTimeout(function() {
-                if(engine.view.descricaoPaginaInicial.classList.contains('sair')){
-                    engine.view.descricaoPaginaInicial.classList.remove('sair');
-                    engine.view.descricaoPaginaInicial.classList.add('entrar');
-                }else{
-                    engine.view.descricaoPaginaInicial.classList.remove('entrar');
-                    engine.view.descricaoPaginaInicial.classList.add('sair');
-                engine.view.descricaoPaginaInicial.classList.remove('sair');
-                engine.view.descricaoPaginaInicial.classList.add('entrar');
-            }}
-        ,500)
-        
-        engine.view.descricaoPaginaInicial.textContent = 'Meu portifólio de Projetos!';
+        }
+    });
+
+    engine.view.opcaoProjetos.addEventListener('mouseover', function () {
+        for (let i = 0; i <= 2; i++) {
+            if (engine.view.descricaoPaginaInicial.classList.contains('entrar')) {
+                card.classList.remove('entrar');
+                card.classList.add('sair');
+            } else {
+                setTimeout(function () {
+                    engine.view.descricaoPaginaInicial.textContent = 'Meu portifólio de Projetos!';
+                    card.classList.remove('sair');
+                    card.classList.add('entrar');
+                }, 2000);
+            }
+        }
     });
 }
 
